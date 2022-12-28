@@ -5,7 +5,7 @@ using System.Security.Authentication;
 
 namespace RabbitMQ.Explore
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -13,12 +13,20 @@ namespace RabbitMQ.Explore
             RabbitMQWithSSLEnable();
         }
 
+        /// <summary>
+        /// RabbitMQ Without SSL is Enable
+        /// </summary>
         private static void RabbitMQWithoutSSLEnable()
         {
             try
             {
+                string rabbitmqHostName = "desktop-s08pnk3";
+                string rabbitmqUsername = "test";
+                string rabbitmqPassword = "test";
+
                 var factory = new ConnectionFactory();
-                factory.Uri = new Uri("amqps://test:test@desktop-s08pnk3");
+                factory.Uri = new Uri($"amqp://{rabbitmqUsername}:{rabbitmqPassword}@{rabbitmqHostName}");
+
                 using (var connection = factory.CreateConnection())
                 {
                     using (var channel = connection.CreateModel())
@@ -37,6 +45,10 @@ namespace RabbitMQ.Explore
                 System.Console.WriteLine(error);
             }
         }
+
+        /// <summary>
+        /// RabbitMQ Code with SSL is enabled
+        /// </summary>
         private static void RabbitMQWithSSLEnable()
         {
             try
@@ -56,7 +68,6 @@ namespace RabbitMQ.Explore
 
                 factory.Uri = new Uri($"amqps://{rabbitmqUsername}:{rabbitmqPassword}@{rabbitmqHostName}");
 
-                //factory.AuthMechanisms = new IAuthMechanismFactory[] { new ExternalMechanismFactory() };
 
                 // Note: This should NEVER be "localhost"
                 factory.Ssl.ServerName = rabbitmqServerName;
@@ -65,8 +76,8 @@ namespace RabbitMQ.Explore
                 factory.Ssl.CertPath = certificateFilePath;
                 // Passphrase for the certificate file - set through OpenSSL
                 factory.Ssl.CertPassphrase = certificatePassphrase;
-
                 factory.Ssl.Enabled = true;
+
                 // Make sure TLS 1.2 is supported & enabled by your operating system
                 factory.Ssl.Version = SslProtocols.Tls12;
 
