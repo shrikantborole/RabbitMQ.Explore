@@ -9,7 +9,7 @@ namespace RabbitMQ.Explore
     {
         static void Main(string[] args)
         {
-            RabbitMQWithoutSSLEnable();
+            //RabbitMQWithoutSSLEnable();
             RabbitMQWithSSLEnable();
         }
 
@@ -56,7 +56,7 @@ namespace RabbitMQ.Explore
                 string rabbitmqHostName = "desktop-s08pnk3";
                 string rabbitmqServerName = "desktop-s08pnk3";
                 string certificateFilePath = @"C:\temp\ThirdOne\client\client_certificate.pem";
-                string certificatePassphrase = "MySecretPassword";
+                string certificatePassphrase = ""; // "MySecretPassword";
                 string rabbitmqUsername = "test";
                 string rabbitmqPassword = "test";
 
@@ -73,9 +73,9 @@ namespace RabbitMQ.Explore
                 factory.Ssl.ServerName = rabbitmqServerName;
 
                 // Path to my .p12 file.
-                factory.Ssl.CertPath = certificateFilePath;
+                //factory.Ssl.CertPath = certificateFilePath;
                 // Passphrase for the certificate file - set through OpenSSL
-                factory.Ssl.CertPassphrase = certificatePassphrase;
+               // factory.Ssl.CertPassphrase = certificatePassphrase;
                 factory.Ssl.Enabled = true;
 
                 // Make sure TLS 1.2 is supported & enabled by your operating system
