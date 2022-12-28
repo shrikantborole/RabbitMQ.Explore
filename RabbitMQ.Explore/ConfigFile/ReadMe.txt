@@ -1,0 +1,3 @@
+﻿On the server end, peer verification is primarily controlled using two configuration options: ssl_options.verify and ssl_options.fail_if_no_peer_cert.
+Setting the ssl_options.fail_if_no_peer_cert option to false tells the node to accept clients which don't present a certificate (for example, were not configured to use one).
+When the ssl_options.verify option is set to verify_peer, the client does send us a certificate, the node must perform peer verification. When set to verify_none, peer verification will be disabled and certificate exchange won't be performed.
