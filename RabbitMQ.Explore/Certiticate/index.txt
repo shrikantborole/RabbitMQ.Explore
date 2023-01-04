@@ -1,3 +1,0 @@
-V	231224133440Z		01	unknown	/CN=desktop-s08pnk3
-V	231224133734Z		02	unknown	/CN=desktop-s08pnk3/O=server
-V	231224133832Z		03	unknown	/CN=desktop-s08pnk3/O=client
