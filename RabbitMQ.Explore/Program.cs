@@ -3,6 +3,7 @@ using RabbitMQ.Client;
 using RabbitMQ.Explore.Logging;
 using System;
 using System.IO;
+using System.Net.Security;
 using System.Security.Authentication;
 
 namespace RabbitMQ.Explore
@@ -28,7 +29,7 @@ namespace RabbitMQ.Explore
         static void Main(string[] args)
         {
             Program program = new Program();
-            program.RabbitMQWithoutSSLEnable();
+            //program.RabbitMQWithoutSSLEnable();
             program.RabbitMQWithSSLEnable();
             Console.WriteLine();
             Console.WriteLine("Press Enter to Exit !!");
@@ -87,7 +88,7 @@ namespace RabbitMQ.Explore
                 string certificatePassphrase = parentSection.GetSection("CertPassphrase").Value;
                 string rabbitmqUsername = parentSection.GetSection("UserName").Value;
                 string rabbitmqPassword = parentSection.GetSection("Password").Value;
-                Boolean.TryParse(parentSection.GetSection("MTLSEnabled").Value, out bool mTLSEnabled);
+                bool.TryParse(parentSection.GetSection("MTLSEnabled").Value, out bool mTLSEnabled);
                 var factory = new ConnectionFactory();
 
                 factory.Uri = new Uri($"amqps://{rabbitmqUsername}:{rabbitmqPassword}@{rabbitmqHostName}");
@@ -112,6 +113,7 @@ namespace RabbitMQ.Explore
                 // This is the default RabbitMQ secure port
                 factory.Port = AmqpTcpEndpoint.UseDefaultPort;
                 factory.VirtualHost = "/";
+                factory.Ssl.AcceptablePolicyErrors = SslPolicyErrors.RemoteCertificateChainErrors | SslPolicyErrors.RemoteCertificateNameMismatch | SslPolicyErrors.RemoteCertificateNotAvailable;
 
                 using (var connection = factory.CreateConnection())
                 {

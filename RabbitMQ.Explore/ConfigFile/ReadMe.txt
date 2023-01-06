@@ -24,7 +24,7 @@ H) You can stop RabbitMQ using CTRL-C, or open another admin console, navigate t
 I) Re-start the Windows service:  .\rabbitmq-service.bat start
 
 NOTE:
-A) First Try with diabling the MTLS.
+A) First Try with disabling the MTLS.
 B) In case if you are setting the property:
 	ssl_options.fail_if_no_peer_cert = false, then 
-	set the  "MTLSEnabled": "false" in appsetting.config
+	set the  "MTLSEnabled": "false" in appsetting.config else true
