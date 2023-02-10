@@ -10,3 +10,4 @@ E) Restart the service and run the code. Ideally this should work.
 Note:
 The p12 file contains BOTH the client cert and key. So we need to pass it in property:
    factory.Ssl.CertPath = certificateFilePath;
+For more information: https://groups.google.com/g/rabbitmq-users/c/Xd9vkBXK3ww
