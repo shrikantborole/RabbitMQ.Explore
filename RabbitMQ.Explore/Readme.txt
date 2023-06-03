@@ -1,6 +1,15 @@
 ﻿Steps to use:
 A) Clone the code.
 B) Update the appsetting.config with proper settings.
+	//Test without SSL Enabled
+	"MTLSEnabled": "false",
+    "SSLEnabled": "false"
+	//SSL Enabled, but TLS is off
+	"MTLSEnabled": "false",
+    "SSLEnabled": "true"
+	//SSL Enabled, and TLS is on
+	"MTLSEnabled": "true",
+    "SSLEnabled": "true"
 C) Copy the certificate at %APPDATA%\RabbitMQ\ and update the RabbitMQ Config file.
 	1. In case if you wnat to generate the certificate on you own machine, please checked Certiciate/ReadMe.txt
 D) Copy the rabbitmq-02.conf at %APPDATA%\RabbitMQ\ and rename it to rabbitmq.conf
