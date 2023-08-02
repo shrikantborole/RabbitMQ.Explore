@@ -1,12 +1,12 @@
 ﻿using Microsoft.Extensions.Options;
-using RabbitMQ.Explore.Helper;
-using RabbitMQ.Explore.Interface;
-using RabbitMQ.Explore.Models;
+using RabbitMQ.Tls.Mtls.Explore.Helper;
+using RabbitMQ.Tls.Mtls.Explore.Interface;
+using RabbitMQ.Tls.Mtls.Explore.Models;
 using System;
 using System.IO;
 using System.Reflection;
 
-namespace RabbitMQ.Explore.Logging
+namespace RabbitMQ.Tls.Mtls.Explore.Logging
 {
     public class FileLogger : ILogger
     {

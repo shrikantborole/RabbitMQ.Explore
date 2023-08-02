@@ -1,4 +1,4 @@
-﻿namespace RabbitMQ.Explore.Models
+﻿namespace RabbitMQ.Tls.Mtls.Explore.Models
 {
     public class RabbitMQOptions
     {

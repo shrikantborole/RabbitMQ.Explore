@@ -1,7 +1,7 @@
-﻿using RabbitMQ.Explore.Helper;
-using RabbitMQ.Explore.Interface;
+﻿using RabbitMQ.Tls.Mtls.Explore.Helper;
+using RabbitMQ.Tls.Mtls.Explore.Interface;
 
-namespace RabbitMQ.Explore.Logging
+namespace RabbitMQ.Tls.Mtls.Explore.Logging
 {
     public class ConsoleLogger : ILogger
     {

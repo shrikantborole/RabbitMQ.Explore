@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 
-namespace RabbitMQ.Explore.Helper
+namespace RabbitMQ.Tls.Mtls.Explore.Helper
 {
     public class CustomTextFormater
     {

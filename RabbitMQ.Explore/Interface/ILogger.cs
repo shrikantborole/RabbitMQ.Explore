@@ -1,4 +1,4 @@
-﻿namespace RabbitMQ.Explore.Interface
+﻿namespace RabbitMQ.Tls.Mtls.Explore.Interface
 {
     public interface ILogger
     {

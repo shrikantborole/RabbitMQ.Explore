@@ -1,12 +1,12 @@
 ﻿using Microsoft.Extensions.Options;
 using RabbitMQ.Client;
-using RabbitMQ.Explore.Interface;
-using RabbitMQ.Explore.Models;
+using RabbitMQ.Tls.Mtls.Explore.Interface;
+using RabbitMQ.Tls.Mtls.Explore.Models;
 using System;
 using System.Net.Security;
 using System.Security.Authentication;
 
-namespace RabbitMQ.Explore.Implementation
+namespace RabbitMQ.Tls.Mtls.Explore.Implementation
 {
     public class RabbitMQWithSSL : IRabbitMQ
     {

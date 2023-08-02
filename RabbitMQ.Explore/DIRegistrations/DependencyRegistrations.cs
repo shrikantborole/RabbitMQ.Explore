@@ -1,12 +1,12 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using RabbitMQ.Explore.Implementation;
-using RabbitMQ.Explore.Interface;
-using RabbitMQ.Explore.Logging;
-using RabbitMQ.Explore.Models;
+using RabbitMQ.Tls.Mtls.Explore.Implementation;
+using RabbitMQ.Tls.Mtls.Explore.Interface;
+using RabbitMQ.Tls.Mtls.Explore.Logging;
+using RabbitMQ.Tls.Mtls.Explore.Models;
 using System;
 
-namespace RabbitMQ.Explore.DIRegistrations
+namespace RabbitMQ.Tls.Mtls.Explore.DIRegistrations
 {
     public static class DependencyRegistrations
     {

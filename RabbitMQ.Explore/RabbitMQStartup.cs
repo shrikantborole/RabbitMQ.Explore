@@ -1,6 +1,6 @@
-﻿using RabbitMQ.Explore.Interface;
+﻿using RabbitMQ.Tls.Mtls.Explore.Interface;
 
-namespace RabbitMQ.Explore
+namespace RabbitMQ.Tls.Mtls.Explore
 {
     public class RabbitMQStartup
     {

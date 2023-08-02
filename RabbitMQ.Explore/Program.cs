@@ -1,8 +1,8 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using RabbitMQ.Explore.DIRegistrations;
+using RabbitMQ.Tls.Mtls.Explore.DIRegistrations;
 
-namespace RabbitMQ.Explore
+namespace RabbitMQ.Tls.Mtls.Explore
 {
     public class Program
     {
